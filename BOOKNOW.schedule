@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>1819897228966970</id>
+  <name>BOOKNOW</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>BOOKNOW1552070292702</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>BOOKNOW:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>BookNow_Scheduling/BookNow_SHASTA_TX</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>BookNow_Scheduling/BookNow_SHASTA_TX</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>BookNow_Scheduling/BookNow_SHASTA_CA</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>BookNow_Scheduling/BookNow_SHASTA_CA</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0BookNow_Scheduling/BookNow_SHASTA_TX":"BookNow_Scheduling/BookNow_SHASTA_TX","1BookNow_Scheduling/BookNow_SHASTA_CA":"BookNow_Scheduling/BookNow_SHASTA_CA"}</displayNameMap>
+  </blockJob>
+  <totalRuns>7933</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="13">2020-02-06 14:42:04.0 UTC</previousRun>
+  <nextRun id="14">2020-02-25 08:42:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>wahla</modifiedBy>
+  <cluster id="15">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="16">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.SimpleTrigger" id="17">
+    <name>1819897228966970</name>
+    <start id="18">2019-02-01 19:42:00.0 UTC</start>
+    <interval>3600000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="19">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

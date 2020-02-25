@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>10019600497074396</id>
+  <name>Transplace_Scheduling_Schedule</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Transplace_Scheduling_Schedule1560270177811</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
+          <project reference="4"/>
+          <name>Transplace_Scheduling_Schedule:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>Transplace_Scheduling</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>Transplace_Scheduling</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>Transplace_CPU_Scheduling</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>Transplace_CPU_Scheduling</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"1Transplace_CPU_Scheduling":"Transplace_CPU_Scheduling","0Transplace_Scheduling":"Transplace_Scheduling"}</displayNameMap>
+  </blockJob>
+  <totalRuns>2266</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="13">2019-09-25 19:46:33.0 UTC</previousRun>
+  <nextRun id="14">2020-02-25 09:00:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>wahla</modifiedBy>
+  <cluster id="15">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="16">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.CronTrigger" id="17">
+    <name>10019600497074396</name>
+    <start id="18">2016-08-25 18:50:00.0 UTC</start>
+    <pattern>0 00 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 * * ?</pattern>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="19">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

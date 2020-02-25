@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.7.5</version>
+    </saved-by-versions>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FindFolder</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">http://schemas.microsoft.com/exchange/services/2006/messages/FindFolder</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FindItem</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">http://schemas.microsoft.com/exchange/services/2006/messages/FindItem</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">GetItem</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">http://schemas.microsoft.com/exchange/services/2006/messages/GetItem</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">GetAttachment</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">http://schemas.microsoft.com/exchange/services/2006/messages/GetAttachment</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MoveItem</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">http://schemas.microsoft.com/exchange/services/2006/messages/MoveItem</property>
+    </object>
+  </property>
+</object>

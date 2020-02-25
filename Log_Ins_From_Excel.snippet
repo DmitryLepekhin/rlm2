@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.4.2</version>
+    </saved-by-versions>
+    <referenced-types/>
+    <referenced-snippets/>
+    <typed-variables/>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_config_file</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">150</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_email_extract</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Customer_Name</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="1">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_URL</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_password</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">9</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_username</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+  </property>
+  <comment class="String">pulls log credentials from excel file in S:</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="2"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="0" id="3">
+        <property name="name" class="String">Query Database</property>
+        <property name="stepAction" class="QueryDatabase2" serializationversion="1">
+          <property name="databaseName" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
+            <property name="value" class="kapow.util.db.DBName">
+              <property name="name" class="String">AS400_Prod</property>
+            </property>
+          </property>
+          <property name="sql" class="String">"SELECT * FROM KAPOWLOGIN WHERE KPCUST = '" + Customer_Name + "'"</property>
+          <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">KPURL</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">website_URL</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">KPUSR</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">website_username</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">KPPASS</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">website_password</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">KPNOTE</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">email_server_to_address</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="4">true</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="5">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String" id="6">website_password</property>
+                </property>
+              </element>
+              <element class="RemoveSpaces">
+                <property name="removeSpaces" class="Boolean">true</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" idref="6"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="7">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String" id="8">website_username</property>
+                </property>
+              </element>
+              <element class="RemoveSpaces">
+                <property name="removeSpaces" class="Boolean">true</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" idref="8"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="9">
+        <property name="name" class="String">Set Current Window</property>
+        <property name="stepAction" class="SetCurrentWindow">
+          <property name="windowReference" class="kapow.robot.robomaker.state.window.reference.IdBasedWindowReference" serializationversion="0">
+            <property name="windowId" class="kapow.robot.robomaker.state.DataModelId">
+              <property name="id" class="String">Unnamed</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="10">
+        <property name="name" class="String">Load Page</property>
+        <property name="stepAction" class="LoadPage2">
+          <property name="urlProvider" class="kapow.robot.plugin.common.stepaction.urlprovider2.AttributeURLProvider2" serializationversion="1">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">website_URL</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="18">
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed: screenSize 800 x 600 -&gt; 1280 x 1024
+Default value changed: userAgentProvider Internet Explorer 8.0 on Windows 7 -&gt; Chrome 27.0 on Windows 7
+Default value changed: maxWaitForTimeout 30000 -&gt; 10000
+Default value changed: httpUserAgent null -&gt; kapow.robot.plugin.common.support.expression.stringexpr.PresetUserAgentStringExpression(userAgent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36")</property>
+            </property>
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="11"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+    </edges>
+  </body>
+</object>

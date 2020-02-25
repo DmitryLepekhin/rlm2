@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.4.2</version>
+      <version>9.7.5</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="Unilever_Request_Log"/>
+      <type name="Unilever_Requested_List_KTPS"/>
+      <type name="Kapow_Extract"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="Unilever_Request_Log" type-name="Unilever_Request_Log"/>
+      <typed-variable name="Unilever_Requested_List_KTPS" type-name="Unilever_Requested_List_KTPS"/>
+      <typed-variable name="Kapow_Extract" type-name="Kapow_Extract"/>
+    </typed-variables>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">L_Requested</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">E_Requested</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Unilever_Request_Log</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">Unilever_Request_Log</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Unilever_Requested_List_KTPS</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">Unilever_Requested_List_KTPS</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="ORADDT" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="1">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+          <property name="ORADTM" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORAPDT" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORAPTM" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORCSH" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORDDAT" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORDTIM" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORODR" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORPDAT" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORPTIM" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="ORSPEC" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+          <property name="SOAPPR" class="AttributeAssignment">
+            <property name="attributeValue" class="String">NA</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CONFTEST</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">JULIAN_DAY</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">JULIAN_TABLE</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">J_TEST3</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">MONTH</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">DAY</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">J_TEST2</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">J_TEST1</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">REQUESTED_LIST</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="2">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">BREAK_LOOP</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">LIVE_DROP_TEST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">OB_DROP_TEST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">DATE</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">TIME</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">YEAR</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">ERROR_TEST</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">ERROR</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">ERROR_LOG</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">LOADTEST2</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">LOADTEST</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Kapow_Extract</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">Kapow_Extract</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_config_file</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">150</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_email_extract</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Customer_Name</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_URL</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_password</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="3">
+          <property name="simpleTypeId" class="Integer">9</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">website_username</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_host</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">webmail.knighttrans.com</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_from_address</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">EDIQA@knighttrans.com</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_to_address</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_password</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="3"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_username</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">email_server_port</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">25</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="4"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">Choose LIVE or DROP</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">Kapow_Extract.DEL_Code</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "2058" ? "OB_DROP" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "UUCCO" ? "USR7_IB" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "USHAZL" &amp;&amp; Kapow_Extract.COM_Code == "ICE" ? "IC_IB" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "RCSSA" ? "IB_OB_LIVE_DROP" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "UHNNE" ? "IB_LIVE" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "2897" ? "IB_OB_LIVE" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "ACSSMO" ? "IB_DROPS" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "UNIPB" ? "IB_LIVE" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "2895" ? "IB_LIVE" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "1345" ? "IB_DROP" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "CLED" ? "IB_DROP" : INPUT</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "SFMS" ? "IB_NON-FRZ_LIVE" : INPUT</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LIVE_DROP_TEST</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="6">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String" id="7">name</element>
+        </property>
+      </object>
+      <object class="Try" id="8"/>
+      <object class="Transition" serializationversion="3" id="9">
+        <property name="name" class="String">Test Variables</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">OB_LIVE</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">OB_DROP</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_DROP</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">OB</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_OB_LIVE_DROP</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">USR7_IB</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IC_IB</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_LIVE</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_DROPS</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_OB_LIVE</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LIVE_DROP_TEST</property>
+              </property>
+              <property name="binaryPredicate" class="kapow.robot.plugin.common.support.predicate.binary.ContainsBinaryPredicate"/>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">IB_NON-FRZ_LIVE</property>
+              </property>
+              <property name="ignoreCase" class="Boolean">true</property>
+            </object>
+          </property>
+          <property name="mode" class="Integer">2</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element idref="7"/>
+        </property>
+      </object>
+      <object class="Try" id="10"/>
+      <object class="Transition" serializationversion="3" id="11">
+        <property name="name" class="String">Test Variables</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">Kapow_Extract.DEL_Code</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">1345</property>
+              </property>
+              <property name="ignoreCase" class="Boolean">true</property>
+            </object>
+          </property>
+          <property name="mode" class="Integer">3</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="12">
+        <property name="name" class="String">Choose LIVE or DROP</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">Kapow_Extract.DEL_Code</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">INPUT == "1345" ? "IB_LIVE" : INPUT</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LIVE_DROP_TEST2</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="13">
+        <property name="name" class="String">Send Email</property>
+        <property name="stepAction" class="SendEmail">
+          <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">email_server_from_address</property>
+            </property>
+          </property>
+          <property name="toAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">unilever@knighttrans.com</property>
+          </property>
+          <property name="ccAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">jacob.kraft@knighttrans.com</property>
+          </property>
+          <property name="subject" class="Expression" serializationversion="1">
+            <property name="text" class="String">&gt;&gt;UnileverDelivery Error&lt;&lt;</property>
+          </property>
+          <property name="message" class="Expression" serializationversion="1">
+            <property name="text" class="String">&gt;&gt;Load: &lt;&lt; + Kapow_Extract.LOAD_NUM + &gt;&gt;   Load At code &lt;&lt; +Kapow_Extract.DEL_Code + &gt;&gt; is not configured to select a delivery type.&lt;&lt;</property>
+          </property>
+          <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">email_server_host</property>
+            </property>
+          </property>
+          <property name="port" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">email_server_port</property>
+            </property>
+          </property>
+          <property name="user" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">email_server_username</property>
+            </property>
+          </property>
+          <property name="password" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">email_server_password</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element idref="7"/>
+        </property>
+      </object>
+      <object class="End" id="14"/>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="15"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="15"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="12"/>
+        <to idref="15"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="14"/>
+      </object>
+    </edges>
+  </body>
+</object>

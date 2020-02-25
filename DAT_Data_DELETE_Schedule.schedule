@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>12107598986414200</id>
+  <name>DAT_Data_DELETE_Schedule</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>DAT_Data_DELETE_Schedule1520373910818</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>DAT_Data_DELETE_Schedule:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>DAT_Input_Data_Rates_DELETE</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>DAT_Input_Data_Rates_DELETE</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0DAT_Input_Data_Rates_DELETE":"DAT_Input_Data_Rates_DELETE"}</displayNameMap>
+  </blockJob>
+  <totalRuns>671</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="10">2020-02-06 06:21:17.0 UTC</previousRun>
+  <nextRun id="11">2020-02-26 06:20:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>kraftj</modifiedBy>
+  <cluster id="12">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="13">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.SimpleTrigger" id="14">
+    <name>12107598986414200</name>
+    <start id="15">2017-09-12 06:20:00.0 UTC</start>
+    <interval>86400000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="16">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

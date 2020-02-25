@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>692764856467600</id>
+  <name>One_Network_Scheduling_Schedule_Weekends</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>One_Network_Scheduling_Schedule_Weekends1482423752789</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>One_Network_Scheduling_Schedule_Weekends:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>One_Network_Scheduling</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>One_Network_Scheduling</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>false</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>One_Network_Scheduling_2</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>One_Network_Scheduling_2</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>false</enabled>
+            <order>1</order>
+          </childReference>
+          <childReference id="13">
+            <child class="robotBlock" id="14">
+              <project reference="4"/>
+              <name>One_Network_Scheduling_3</name>
+              <namedBlock>true</namedBlock>
+              <robot id="15">
+                <name>One_Network_Scheduling_3</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>2</scopeName>
+            <enabled>true</enabled>
+            <order>2</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"2One_Network_Scheduling_3":"One_Network_Scheduling_3","1One_Network_Scheduling_2":"One_Network_Scheduling_2","0One_Network_Scheduling":"One_Network_Scheduling"}</displayNameMap>
+  </blockJob>
+  <totalRuns>6629</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="16">2020-02-03 05:15:52.0 UTC</previousRun>
+  <nextRun id="17">2020-02-28 23:00:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>kraftj</modifiedBy>
+  <cluster id="18">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="19">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.CronTrigger" id="20">
+    <name>692764856467600</name>
+    <start id="21">2016-08-12 17:00:00.0 UTC</start>
+    <pattern>0 00 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 ? * SAT,SUN</pattern>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="22">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

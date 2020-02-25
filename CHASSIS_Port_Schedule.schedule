@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>4222098912477700</id>
+  <name>CHASSIS_Port_Schedule</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>CHASSIS_Port_Schedule1529522955700</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>CHASSIS_Port_Schedule:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_LONG_BEACH_TERMINAL</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>CHASSIS_CONTAINER_LONG_BEACH_TERMINAL</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_TERMINAL_ISLAND_TERMINAL</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>CHASSIS_CONTAINER_TERMINAL_ISLAND_TERMINAL</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+          <childReference id="13">
+            <child class="robotBlock" id="14">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_WEST_BASIN_TERMINAL</name>
+              <namedBlock>true</namedBlock>
+              <robot id="15">
+                <name>CHASSIS_CONTAINER_WEST_BASIN_TERMINAL</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>2</scopeName>
+            <enabled>true</enabled>
+            <order>2</order>
+          </childReference>
+          <childReference id="16">
+            <child class="robotBlock" id="17">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_HAJIN_TERMINAL</name>
+              <namedBlock>true</namedBlock>
+              <robot id="18">
+                <name>CHASSIS_CONTAINER_HAJIN_TERMINAL</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>3</scopeName>
+            <enabled>true</enabled>
+            <order>3</order>
+          </childReference>
+          <childReference id="19">
+            <child class="robotBlock" id="20">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_ITSLB</name>
+              <namedBlock>true</namedBlock>
+              <robot id="21">
+                <name>CHASSIS_CONTAINER_ITSLB</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>4</scopeName>
+            <enabled>true</enabled>
+            <order>4</order>
+          </childReference>
+          <childReference id="22">
+            <child class="robotBlock" id="23">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_SSAOA</name>
+              <namedBlock>true</namedBlock>
+              <robot id="24">
+                <name>CHASSIS_CONTAINER_SSAOA</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>5</scopeName>
+            <enabled>true</enabled>
+            <order>5</order>
+          </childReference>
+          <childReference id="25">
+            <child class="robotBlock" id="26">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_APLTI</name>
+              <namedBlock>true</namedBlock>
+              <robot id="27">
+                <name>CHASSIS_CONTAINER_APLTI</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>6</scopeName>
+            <enabled>true</enabled>
+            <order>6</order>
+          </childReference>
+          <childReference id="28">
+            <child class="robotBlock" id="29">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_EATI</name>
+              <namedBlock>true</namedBlock>
+              <robot id="30">
+                <name>CHASSIS_CONTAINER_EATI</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>7</scopeName>
+            <enabled>true</enabled>
+            <order>7</order>
+          </childReference>
+          <childReference id="31">
+            <child class="robotBlock" id="32">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_PCTLB</name>
+              <namedBlock>true</namedBlock>
+              <robot id="33">
+                <name>CHASSIS_CONTAINER_PCTLB</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>8</scopeName>
+            <enabled>true</enabled>
+            <order>8</order>
+          </childReference>
+          <childReference id="34">
+            <child class="robotBlock" id="35">
+              <project reference="4"/>
+              <name>CHASSIS_CONTAINER_P4TI</name>
+              <namedBlock>true</namedBlock>
+              <robot id="36">
+                <name>CHASSIS_CONTAINER_P4TI</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>9</scopeName>
+            <enabled>true</enabled>
+            <order>9</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"8CHASSIS_CONTAINER_PCTLB":"CHASSIS_CONTAINER_PCTLB","9CHASSIS_CONTAINER_P4TI":"CHASSIS_CONTAINER_P4TI","2CHASSIS_CONTAINER_WEST_BASIN_TERMINAL":"CHASSIS_CONTAINER_WEST_BASIN_TERMINAL","7CHASSIS_CONTAINER_EATI":"CHASSIS_CONTAINER_EATI","6CHASSIS_CONTAINER_APLTI":"CHASSIS_CONTAINER_APLTI","3CHASSIS_CONTAINER_HAJIN_TERMINAL":"CHASSIS_CONTAINER_HAJIN_TERMINAL","1CHASSIS_CONTAINER_TERMINAL_ISLAND_TERMINAL":"CHASSIS_CONTAINER_TERMINAL_ISLAND_TERMINAL","0CHASSIS_CONTAINER_LONG_BEACH_TERMINAL":"CHASSIS_CONTAINER_LONG_BEACH_TERMINAL","5CHASSIS_CONTAINER_SSAOA":"CHASSIS_CONTAINER_SSAOA","4CHASSIS_CONTAINER_ITSLB":"CHASSIS_CONTAINER_ITSLB"}</displayNameMap>
+  </blockJob>
+  <totalRuns>10688</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="37">2020-02-06 14:30:45.0 UTC</previousRun>
+  <nextRun id="38">2020-02-25 08:25:00.0 UTC</nextRun>
+  <maxRuntime>3000</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>kraftj</modifiedBy>
+  <cluster id="39">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="40">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.CronTrigger" id="41">
+    <name>4222098912477700</name>
+    <start id="42">2017-02-09 19:10:00.0 UTC</start>
+    <pattern>0 25 4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 * * ?</pattern>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="43">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

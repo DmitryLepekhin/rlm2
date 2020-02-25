@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>249033880907600</id>
+  <name>Clearinghouse_report</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Clearinghouse_report1538411066905</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Clearinghouse_report:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>CLEARINGHOUSE_HIRING_REPORT</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>CLEARINGHOUSE_HIRING_REPORT</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0CLEARINGHOUSE_HIRING_REPORT":"CLEARINGHOUSE_HIRING_REPORT"}</displayNameMap>
+  </blockJob>
+  <totalRuns>66</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="10">2019-12-16 15:30:24.0 UTC</previousRun>
+  <nextRun id="11">2020-03-02 05:30:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>kapowmc</modifiedBy>
+  <cluster id="12">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="13">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.CronTrigger" id="14">
+    <name>249033880907600</name>
+    <start id="15">2017-03-17 22:50:00.0 UTC</start>
+    <pattern>0 30 08 ? * MON</pattern>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="16">2019-12-17 18:16:59.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

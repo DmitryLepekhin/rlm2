@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>14604751749220200</id>
+  <name>AB_SCHEDULING</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>AB_SCHEDULING1507909458305</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
+          <project reference="4"/>
+          <name>AB_SCHEDULING:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>ANHEUSER_BUSCH_SCHEDULING_KTPS</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>ANHEUSER_BUSCH_SCHEDULING_KTPS</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>ANHEUSER_BUSCH_SCHEDULING</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>ANHEUSER_BUSCH_SCHEDULING</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0ANHEUSER_BUSCH_SCHEDULING_KTPS":"ANHEUSER_BUSCH_SCHEDULING_KTPS","2ANHEUSER_BUSCH_SCHEDULING_2":"ANHEUSER_BUSCH_SCHEDULING_2","1ANHEUSER_BUSCH_SCHEDULING":"ANHEUSER_BUSCH_SCHEDULING"}</displayNameMap>
+  </blockJob>
+  <totalRuns>6197</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="13">2019-04-15 14:08:00.0 UTC</previousRun>
+  <nextRun id="14">2020-02-25 08:07:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>torresf</modifiedBy>
+  <cluster id="15">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="16">
+    <scheduler/></scheduler>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="17">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

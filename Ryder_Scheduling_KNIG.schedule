@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>3971851260904300</id>
+  <name>Ryder_Scheduling_KNIG</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Ryder_Scheduling_KNIG1534269889948</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
+          <project reference="4"/>
+          <name>Ryder_Scheduling_KNIG:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>Ryder_Scheduling_PICKUP_KNIG</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>Ryder_Scheduling_PICKUP_KNIG</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>Ryder_Scheduling_Drop_KNIG</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>Ryder_Scheduling_Drop_KNIG</name>
+                <project>AS400_Extract</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0Ryder_Scheduling_PICKUP_KNIG":"Ryder_Scheduling_PICKUP_KNIG","1Ryder_Scheduling_Drop_KNIG":"Ryder_Scheduling_Drop_KNIG"}</displayNameMap>
+  </blockJob>
+  <totalRuns>0</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <nextRun id="13">2020-02-25 08:40:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>torresf</modifiedBy>
+  <cluster id="14">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="15">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.CronTrigger" id="16">
+    <name>3971851260904300</name>
+    <start id="17">2017-06-09 16:20:00.0 UTC</start>
+    <pattern>0 40 7,8,9,10,11,12,13,14,15,16,17,18 * * ?</pattern>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <commitMessage/>
+  <lastModified id="18">2019-10-28 17:20:54.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
